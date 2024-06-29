@@ -1,0 +1,42 @@
+// Parte superior del header
+.first-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo-container{
+        .logo-title{
+            color: #C40C0C;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+    
+    .btn-container{
+        display: flex;
+        justify-content: space-around;
+        width: 24rem;
+    }
+    
+    .btn-header{
+        padding: 18px 30px;
+        border: none;
+        border-radius: 20px;
+        background-color: transparent;
+        &:hover{
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+        &.active{
+            color: #000;
+            font-weight: bolder;
+            background-color: transparent;
+            // background-color: #000;
+        }
+    }
+
+    .sesion-header{
+        border-radius: 15px;
+    }
+}
+//Aca termina la parte superior del header
