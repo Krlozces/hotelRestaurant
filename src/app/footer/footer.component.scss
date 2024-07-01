@@ -1,0 +1,38 @@
+footer{
+    background-color: #F6F5F5;
+    .section-container{
+        display: flex;
+        align-items: center;
+        ul{
+            list-style: none;
+            li{
+                padding: 4px 0;
+                a{
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: #000;
+                    &:hover{
+                        color: #FF6B6B;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .span-container{
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem 1rem;
+        a{
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            color: #000;
+            &:hover{
+                color: #FF6B6B;
+                text-decoration: underline;
+            }
+        }
+    }
+}
