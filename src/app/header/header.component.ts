@@ -9,7 +9,7 @@ import {NgClass} from '@angular/common';
     <header>
       <section class="first-header">
         <article class="logo-container">
-          <img src="../../assets/images/logo-hotel-restaurant.png" alt="logo" class="logo" />
+          <img src="assets/images/logo.jpg" alt="logo" class="logo" />
           <span class="logo-title">
             Hotel&Restaurant
           </span>
