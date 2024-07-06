@@ -15,4 +15,8 @@ export class RoomService {
   getListOfRooms():Observable<Room[]>{
     return this.httpClient.get<Room[]>(`${this.baseURL}`);
   }
+
+  registerRoom(room: Room):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`, room);
+  }
 }
