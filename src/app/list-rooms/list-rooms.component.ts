@@ -34,5 +34,14 @@ export class ListRoomsComponent implements OnInit {
       this.rooms = data;
     });
   }
+
+  // updateRoom(id:number){
+  //   this.router.navigate(['actualizar-empleado', id]);
+  // }
   
+  deleteRoom(id: number){
+    this.roomService.deteleRoom(id).subscribe(data => {
+      this.getRooms();
+    });
+  }
 }
