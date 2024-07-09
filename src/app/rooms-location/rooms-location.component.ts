@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [],
   template: `
     <article class="listing">
+      <div class="listing-img"></div>
       <!-- <img class="listing-photo" [src]="" alt="" /> -->
       <h2 class="listing-heading">{{ name }}</h2>
       <p class="listing-location"><span>Descripción: </span>{{ description }}</p>
