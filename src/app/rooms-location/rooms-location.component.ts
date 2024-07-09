@@ -6,14 +6,15 @@ import { Component, Input } from '@angular/core';
   imports: [],
   template: `
     <article class="listing">
-      <div class="listing-img"></div>
-      <!-- <img class="listing-photo" [src]="" alt="" /> -->
-      <h2 class="listing-heading">{{ name }}</h2>
-      <p class="listing-location"><span>Descripción: </span>{{ description }}</p>
-      <p class="listing-location">{{ isBooked }}</p>
-      <p class="listing-location"><span>Capacidad: </span>{{ capacidad }}</p>
-      <p class="listing-location"><span>Tarifa: </span>{{ tarifa }}</p>
-      <a href="#">Ver más</a>
+      <img class="listing-img" src="https://tse2.mm.bing.net/th?id=OIP.ytZ_0ADdZdB8nmcgMQKjnwHaEK&pid=Api" alt="{{ name }}" />
+      <div class="listing-container">
+        <h2 class="listing-heading">{{ name }}</h2>
+        <p class="listing-location"><span>Descripción: </span>{{ description }}</p>
+        <p class="listing-location">{{ isBooked }}</p>
+        <p class="listing-location"><span>Capacidad: </span>{{ capacidad }}</p>
+        <p class="listing-location"><span>Tarifa: </span>{{ tarifa }}</p>
+        <a href="#">Ver más</a>
+      </div>
     </article>
   `,
   styleUrl: './rooms-location.component.scss'
