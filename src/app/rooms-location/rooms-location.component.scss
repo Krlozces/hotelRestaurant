@@ -1,31 +1,19 @@
 .listing {
-    width: 100%; 
+    overflow: hidden; 
     max-width: 24rem; 
-    @media (min-width: 1024px) { 
-        display: flex; 
-        max-width: 100%; 
-    }
+    border-radius: 0.25rem; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
     .listing-img{
-        overflow: hidden; 
-        background-size: cover; 
-        text-align: center; 
-        flex: none; 
-        height: 12rem; 
-        border-top-left-radius: 0.25rem;
-        border-top-right-radius: 0.25rem; 
-
-        @media (min-width: 1024px) { 
-            width: 12rem; 
-            height: auto; 
-            border-top-left-radius: 0;
-            border-top-right-radius: 0; 
-            border-top-left-radius: 0.25rem;
-            border-bottom-left-radius: 0.25rem; 
-        }
+        width: 100%;
+    }
+    .listing-container{
+        padding: 1rem 1.5rem;
     }
     .listing-heading {
-        color: var(--primary-color);
-        padding: 10px 20px 0 20px;
+        margin-bottom: 0.5rem; 
+        font-size: 1.25rem;
+        line-height: 1.75rem; 
+        font-weight: 700; 
     }
     .listing-photo {
         height: 250px;
@@ -35,6 +23,9 @@
     }
     .listing-location {
         padding: 10px 20px 20px 20px;
+        color: #374151; 
+        font-size: 1rem;
+        line-height: 1.5rem; 
     }
     a{
         padding-left: 20px;
