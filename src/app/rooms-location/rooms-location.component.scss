@@ -1,8 +1,28 @@
 .listing {
-    background: var(--accent-color);
-    border-radius: 30px;
-    padding-bottom: 30px;
-    border: 1px solid black;
+    width: 100%; 
+    max-width: 24rem; 
+    @media (min-width: 1024px) { 
+        display: flex; 
+        max-width: 100%; 
+    }
+    .listing-img{
+        overflow: hidden; 
+        background-size: cover; 
+        text-align: center; 
+        flex: none; 
+        height: 12rem; 
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem; 
+
+        @media (min-width: 1024px) { 
+            width: 12rem; 
+            height: auto; 
+            border-top-left-radius: 0;
+            border-top-right-radius: 0; 
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem; 
+        }
+    }
     .listing-heading {
         color: var(--primary-color);
         padding: 10px 20px 0 20px;
