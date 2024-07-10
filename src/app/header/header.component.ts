@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import {NgClass} from '@angular/common';
+import {NgClass, NgIf} from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgIf, FontAwesomeModule],
   template: `
     <header>
       <section class="first-header">
@@ -23,8 +26,25 @@ import {NgClass} from '@angular/common';
           </button>
         </article>
         <article class="sesion-header">
-          <!-- La imagen de inicio de sesión -->
-          <span>Aquí iría el desplegable para el inicio de sesión</span>
+          <button class="btn-dropdown" (click)="displayDropdown()">
+            <span class="bars-container">
+              <fa-icon [icon]="faBars" size="lg"></fa-icon>
+            </span>
+            <span class="user-container">
+              <fa-icon [icon]="faUser" size="lg"></fa-icon>
+            </span>
+          </button>
+          <ul *ngIf="isDropdownVisible" class="dropdown">
+            <li class="dropdown-item">
+              <a href="#">Regístrate</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#">Inicia sesión</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#">Centro de ayuda</a>
+            </li>
+          </ul>
         </article>
       </section>
     </header>
@@ -33,8 +53,17 @@ import {NgClass} from '@angular/common';
 })
 export class HeaderComponent {
   selectedButton : string = '';
+  
+  faBars = faBars;
+  faUser = faUser;
+  isDropdownVisible = false;
 
   selectButton(buttonId: string){
     this.selectedButton = buttonId;
   }
+
+  displayDropdown(){
+    this.isDropdownVisible = !this.isDropdownVisible;
+  }
+
 }
