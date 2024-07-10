@@ -73,11 +73,12 @@
                 .dropdown-item{
                     padding: 10px 20px;
                     width: 100%;
-                    a{
-                        text-decoration: none;
+                    span:hover{
+                        cursor: pointer;
                     }
                     &:hover{
                         background-color: #f5f5f5;
+                        cursor:pointer;
                     }
                 }
             }
