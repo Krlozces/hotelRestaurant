@@ -3,6 +3,8 @@ import {NgClass, NgIf} from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { MatDialog } from '@angular/material/dialog';
+import { UserAddEditComponent } from '../user-add-edit/user-add-edit.component';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +21,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
         </article>
         <article class="btn-container">
           <button id="estadias" type="button" class="btn-header" [ngClass]="{'active': selectedButton === 'estadias'}" (click)="selectButton('estadias')">
-            Estadías
+            Eventos
           </button>
           <button id="experiencias" type="button" class="btn-header" [ngClass]="{'active': selectedButton === 'experiencias'}" (click)="selectButton('experiencias')">
             Experiencias
@@ -36,13 +38,13 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
           </button>
           <ul *ngIf="isDropdownVisible" class="dropdown">
             <li class="dropdown-item">
-              <a href="#">Regístrate</a>
+              <span mat-raised-button (click)="openAddEditUser()">Regístrate</span>
             </li>
             <li class="dropdown-item">
-              <a href="#">Inicia sesión</a>
+              <span>Inicia sesión</span>
             </li>
             <li class="dropdown-item">
-              <a href="#">Centro de ayuda</a>
+              <span>Centro de ayuda</span>
             </li>
           </ul>
         </article>
@@ -52,6 +54,9 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  constructor(private _dialog: MatDialog){}
+
   selectedButton : string = '';
   
   faBars = faBars;
@@ -64,6 +69,10 @@ export class HeaderComponent {
 
   displayDropdown(){
     this.isDropdownVisible = !this.isDropdownVisible;
+  }
+
+  openAddEditUser(){
+    this._dialog.open(UserAddEditComponent);
   }
 
 }
