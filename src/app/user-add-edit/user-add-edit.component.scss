@@ -1,0 +1,58 @@
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .phone-number{
+        padding: 1rem 4rem;
+        outline: none;
+        width: 80%;
+        border-radius: 15px 15px 0 0;
+        border: 1px solid #CECECE;
+    }
+    .phone-number-field{
+        width: 80%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #CECECE;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.btn-submit-container{
+    display: flex;
+    justify-content: center;
+    .btn-submit{
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 4rem;
+        border-radius: 1rem;
+        text-align: center;
+        border: none;
+        &:hover{
+            cursor: pointer;
+            background-color: #CDCDCD;
+        }
+    }
+}
+.btns-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .btn-brand{
+        border-radius: 1rem;
+        text-align: center;
+        border: 1px solid #CECECE;
+        padding: 1rem 4rem;
+        text-decoration: none;
+        margin: 1rem 0;
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        &:hover{
+            background-color: #CDCDCD;
+        }
+    }
+}
