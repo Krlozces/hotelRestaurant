@@ -14,7 +14,7 @@ import { UserAddEditComponent } from '../user-add-edit/user-add-edit.component';
     <header>
       <section class="first-header">
         <article class="logo-container">
-          <img src="assets/images/logo.jpg" alt="logo" class="logo" />
+          <img src="assets/images/logo.jpg" alt="logo" class="logo" width="50px" height="auto"/>
           <span class="logo-title">
             Hotel&Restaurant
           </span>
