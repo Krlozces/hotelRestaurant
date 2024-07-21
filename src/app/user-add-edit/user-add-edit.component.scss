@@ -20,6 +20,12 @@
     }
 }
 
+.close-icon{
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .btn-submit-container{
     display: flex;
     justify-content: center;
@@ -54,5 +60,38 @@
         &:hover{
             background-color: #CDCDCD;
         }
+    }
+}
+
+.modal-content-scroll {
+    max-height: 400px; /* Ajusta la altura según sea necesario */
+    overflow-y: auto;
+  }
+  
+  .inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-submit-container {
+    margin-top: 10px;
+  }
+
+.btns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    fa-icon {
+        margin-right: 10px;
     }
 }
