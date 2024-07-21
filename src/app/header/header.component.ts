@@ -41,7 +41,7 @@ import { UserAddEditComponent } from '../user-add-edit/user-add-edit.component';
               <span mat-raised-button (click)="openAddEditUser()">Regístrate</span>
             </li>
             <li class="dropdown-item">
-              <span>Inicia sesión</span>
+              <span (click)="openAddEditUser()">Inicia sesión</span>
             </li>
             <li class="dropdown-item">
               <span>Centro de ayuda</span>
@@ -71,8 +71,12 @@ export class HeaderComponent {
     this.isDropdownVisible = !this.isDropdownVisible;
   }
 
-  openAddEditUser(){
-    this._dialog.open(UserAddEditComponent);
+  openAddEditUser(): void {
+    if (!this._dialog.openDialogs.length) {
+      this._dialog.open(UserAddEditComponent, {
+        width: '600px',
+      });
+    }
   }
 
 }
