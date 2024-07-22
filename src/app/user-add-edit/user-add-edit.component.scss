@@ -20,10 +20,21 @@
     }
 }
 
+.subtitle{
+    text-align:center;
+}
+
+.informative-text{
+    padding:0 1rem;
+}
+
 .close-icon{
     margin: 1rem;
     display: flex;
     justify-content: flex-end;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .btn-submit-container{
